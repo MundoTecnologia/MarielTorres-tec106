@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #000;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 240px 1fr 200px;
+            align-items: center;
+            padding: 10px;
+            background-color: #212121;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header .search-bar input {
+            width: 60%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 2px 0 0 2px;
+        }
+
+        header .search-bar button {
+            padding: 8px 16px;
+            background-color: #303030;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 2px 2px 0;
+        }
+
+        header .user {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        header .user img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            height: calc(100vh - 60px);
+        }
+
+        .sidebar {
+            background-color: #212121;
+            color: white;
+            padding: 10px;
+            height: 100%;
+            position: fixed;
+            overflow-y: auto;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #383838;
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            overflow-y: auto;
+        }
+
+        .content .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .content .video-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content .video-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .content .video-item h3 {
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        .content .video-item p {
+            margin: 0 10px 10px;
+            font-size: 14px;
+            color: #606060;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">YouTube</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button>Search</button>
+        </div>
+        <div class="user">
+            <img src="https://via.placeholder.com/32" alt="User">
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Subscriptions</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Your Videos</a></li>
+                <li><a href="#">Watch Later</a></li>
+                <li><a href="#">Liked Videos</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <div class="video-grid">
+                <div class="video-item">
+                    <img src="https://via.placeholder.com/400x250" alt="Thumbnail">
+                    <h3>Video Title</h3>
+                    <p>Channel Name • 1M views • 2 days ago</p>
+                </div>
+                <div class="video-item">
+                    <img src="https://via.placeholder.com/400x250" alt="Thumbnail">
+                    <h3>Video Title</h3>
+                    <p>Channel Name • 500K views • 1 day ago</p>
+                </div>
+                <div class="video-item">
+                    <img src="https://via.placeholder.com/400x250" alt="Thumbnail">
+                    <h3>Video Title</h3>
+                    <p>Channel Name • 750K views • 3 days ago</p>
+                </div>
+                <div class="video-item">
+                    <img src="https://via.placeholder.com/400x250" alt="Thumbnail">
+                    <h3>Video Title</h3>
+                    <p>Channel Name • 200K views • 5 days ago</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

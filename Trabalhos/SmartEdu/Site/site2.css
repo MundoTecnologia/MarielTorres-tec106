@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+}
+
+
+.container{
+    display: flex;
+    text-decoration: none;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    
+    
+}
