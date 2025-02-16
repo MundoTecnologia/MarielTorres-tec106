@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-image: url(delivery.png);
+    background-repeat: no-repeat;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}

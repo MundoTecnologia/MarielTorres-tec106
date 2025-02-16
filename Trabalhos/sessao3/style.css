@@ -1,0 +1,49 @@
+*{
+    background-color: rgb(228, 130, 59);
+    
+}
+h1{
+    text-align: center;
+    color: white;
+
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+   
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 500px
+}
+#imagens{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;  
+    
+}
+
+video{
+    width: 500px;
+}
+#videos{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;  
+}
+
+audio{
+    width: 500px;
+}
+#audio{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;  
+}
+

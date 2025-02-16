@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: dodgerblue;
+}
+
+h3{
+    text-align: center;
+    color: white;
+}
+div{
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    background-color: bisque;
+    width: 700px;
+    height: 450px;
+}
+
+img{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+}
+
+section{
+    gap: 20px;
+}
+
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+button{
+    display: none;
+    margin: auto;
+}
+
+input{
+    display: none;
+    margin: auto;
+    
+}
+
