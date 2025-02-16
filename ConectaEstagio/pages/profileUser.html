@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Perfil | WorkLink</title>
+
+        <link rel="icon" href="../assets/image/favicon.ico">
+
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../assets/css/styleUser/profile.css">
+        <link rel="stylesheet" href="../assets/css/styleUser/profileHome.css">
+
+        
+        <script src="../assets/js/appShowDataUserOnline.js"></script>
+        <script src="../assets/js/appUpdateDataUserOnlie.js" defer></script>
+        <script src="../assets/js/appGeneraterQRcodeUser.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+
+    </head>
+
+    <body onload="ShowDataUserOnline(),GeneraterQRcodeUser()">
+
+        <!-- header -->
+        <header class="header">
+            <nav class="container nav-header">
+
+                <div class="nav-logo">
+                    <a href="./indexUser.html" class="logo">
+                        Conecta<span>Estágio</span>
+                    </a>
+                    <i class="bi bi-list" id="btn-state-aside"></i>
+                </div>
+
+                <div class="nav-header-link">
+                    <a href="./newsUser.html" class="link-news" id="news-user-online">
+                        <i class="icon-news bi bi-bell"></i>
+                    </a>
+
+                    <div class="card-img-and-name">
+
+                        <span class="card-img-header img-profile-user-online" id="card-img-header">
+                            
+                        </span>
+                        <div class="name-and-icon" id="name-and-icon-header">
+                            <span id="name-header" class="first-user-online"></span>
+                            <i class="bi bi-caret-down-fill" id="icon-header"></i>
+                        </div>
+
+                        <ul id="list-dropdown-header">
+                            
+                            <li>
+                                <a href="./profileUser.html">
+                                    <i class="bi bi-person"></i>
+                                    <span>Meu Perfil</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="./profileUserEdit.html">
+                                    <i class="bi bi-gear"></i>
+                                    <span>Configurações</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="bi bi-info-lg"></i>
+                                    <span>Ajuda?</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" onclick="logOut()">
+                                    <i class="bi bi-box-arrow-right"></i>
+                                    <span>Terminar sessão</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+
+
+                    </div>
+                </div>
+
+            </nav>
+        </header>
+        <!-- header end -->
+
+        <!-- aside -->
+        <aside class="aside anime-bottom" id="asideBar">
+
+            <a href="./indexUser.html">
+                <i class="icon bi bi-house"></i>
+            </a>
+            
+            <a href="./pesquisar.html">
+                <i class="icon bi bi-search"></i>
+            </a>
+
+            <a href="./empresas.html">
+                <i class="icon bi bi-building"></i>
+            </a>
+
+            <a href="./chatUser.html">
+                <i class="icon bi bi-chat"></i>
+            </a>
+
+            <a href="./recruta.html">
+                <i class="icon bi bi-briefcase"></i>
+            </a>
+
+        </aside>
+        <!-- aside end -->
+
+
+        <!-- main -->
+        <main class="main-profile">
+
+            <section class="section-profile-banner">
+
+            </section>
+                
+            <section class="container section-profile-content">
+                    <article class="card-info-profile ">
+                        <div class="card-img-profile-user">
+                            <div class="img-profile-user-online"></div>
+                        </div>
+                        <strong>
+                            <span class="first-user-online">fisrt name</span> 
+                            <span class="last-user-online">last name</span>
+                        </strong>
+                        <div class="card-desc-profile">
+                            <span class="desc-user-online">
+                                Bio !
+                            </span>
+                        </div>
+
+                        <div class="card-contact">
+
+                            <div>
+                                <i class="bi bi-award"></i>
+                                <span class="career-user-online"></span>
+                            </div>
+                            <i class="bi bi-dot"></i>
+                            <div>
+                                <i class="bi bi-whatsapp"></i>
+                                <span>_<span class="number-user-online"></span></span>
+                            </div>
+                            <i class="bi bi-dot"></i>
+                            <div>
+                                <i class="bi bi-at"></i>
+                                <span>_<span class="email-user-online"></span></span>
+                            </div>
+                        </div>
+
+                        <div class="card-more-info-profile">
+                            <span>
+                                <strong class="count-conection-user-online"></strong>
+                                <small>Conexões</small>
+                            </span>
+
+                            <div class="line"></div>
+
+                            <span>
+                                <strong>230</strong>
+                                <small>Publicações</small>
+                            </span>
+
+                            <div class="line"></div>
+
+                            <button class="btn-public">Publicar</button>
+
+                            <button class="btn-cv">Meu CV</button>
+
+                            <button>
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+                        </div>
+
+                    </article>
+            </section>
+
+            <nav class="nav-profile">
+                <a href="./profileUser.html">
+                    <i class="bi bi-house"></i>
+                </a>
+                
+                <a href="./profileUserEdit.html">
+                    <i class="bi bi-pencil"></i>
+                   
+                </a>
+            </nav>
+
+            <section class="container section-nav-profile">
+
+                <section class="section-nav-profile-left">
+
+                    <div class="card-description">
+                        <strong class="title-profile">
+                            <span>B</span>io!
+                        </strong>
+                        <p class="desc-user-online">
+                            
+                        </p>
+
+                        <div class="info-personal">
+                            <i class="bi bi-geo-alt"></i>
+                            <span class="gps-user-online">Luanda, Ilha de luanda</span>
+                        </div>
+
+                        <div class="info-personal">
+                            <i class="bi bi-gift"></i>
+                            <span>26, setembro 2004</span>
+                        </div>
+
+                        <div class="info-personal">
+                            <i class="bi bi-award"></i>
+                            <span class="career-user-online"></span>
+                        </div>
+                    </div>
+
+                    <div class="card-expe">
+                        <strong class="title-profile">
+                            <span>E</span>xperiência Profissional
+                        </strong>
+
+                        <ul id="list-exp-user-online">
+                            <!-- <li>
+                                Portugues
+                            </li>
+
+                            <li>
+                                Inglesh
+                            </li>
+
+                            <li>
+                                Frances
+                            </li>
+
+                            <li>
+                                Latim
+                            </li> -->
+                        </ul>
+
+                    </div>
+
+                    <div class="card-expe">
+                        <strong class="title-profile">
+                            <span>L</span>inguas Faladas
+                        </strong>
+
+                        <ul id="list-lang-user-online">
+
+                            <!-- <li>
+                                Portugues
+                            </li>
+
+                            <li>
+                                Inglesh
+                            </li>
+
+                            <li>
+                                Frances
+                            </li>
+
+                            <li>
+                                Latim
+                            </li> -->
+
+                        </ul>
+                    </div>
+
+                    <div class="card-expe">
+                        <strong class="title-profile">
+                            <span>M</span>eu QRcode
+                        </strong>
+
+                        <div id="Qrcode-profile">
+
+                        </div>
+
+                        
+                    </div>
+                    
+                </section>
+
+
+                <section class="section-nav-profile-center" id="section-nav-profile-center">
+
+                    <strong class="title-profile">
+                        <span>P</span>ublicações
+                    </strong>
+
+                      <!--<article class="card-post anime-left">
+                        <div class="card-img-post">
+                            <div class="img-post">SON</div>
+                        </div>
+                        <div class="card-desc-post">
+                            <strong>Sonangol</strong>
+                            <small class="date-post">
+                                No dia 26, setembro 2004
+                            </small>
+                            
+                            <ul>
+                                <li>
+                                    <i class="bi bi-award"></i>_ <span>programador back-end</span>
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-mortarboard"></i>_ <span>NextJs, Saas, UI</span>
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-lamp"></i>_ <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod explicabo sunt dicta debitis repellendus praesentium...</span>
+                                </li>
+                            </ul>
+
+                            <div class="card-btn-react-post">
+                                <div>
+                                    <button>
+                                        <i class="bi bi-heart"></i>
+                                        <span>Gosto</span>
+                                    </button>
+                                    <button>
+                                        <i class="bi bi-chat"></i>
+                                        <span>Comentario</span>
+                                    </button>
+                                </div>
+                                <button>
+                                    <i class="bi bi-briefcase"></i>
+                                    <span>Candidata-se</span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="card-post anime-left">
+                        <div class="card-img-post">
+                            <div class="img-post">SON</div>
+                        </div>
+                        <div class="card-desc-post">
+                            <strong>Sonangol</strong>
+                            <small class="date-post">
+                                No dia 26, setembro 2004
+                            </small>
+                            
+                            <ul>
+                                <li>
+                                    <i class="bi bi-award"></i>_ <span>programador back-end</span>
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-mortarboard"></i>_ <span>NextJs, Saas, UI</span>
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-lamp"></i>_ <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod explicabo sunt dicta debitis repellendus praesentium...</span>
+                                </li>
+                            </ul>
+
+                            <div class="card-btn-react-post">
+                                <div>
+                                    <button>
+                                        <i class="bi bi-heart"></i>
+                                        <span>Gosto</span>
+                                    </button>
+                                    <button>
+                                        <i class="bi bi-chat"></i>
+                                        <span>Comentario</span>
+                                    </button>
+                                </div>
+                                <button>
+                                    <i class="bi bi-briefcase"></i>
+                                    <span>Candidata-se</span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="card-post anime-left">
+                        <div class="card-img-post">
+                            <div class="img-post">SON</div>
+                        </div>
+                        <div class="card-desc-post">
+                            <strong>Sonangol</strong>
+                            <small class="date-post">
+                                No dia 26, setembro 2004
+                            </small>
+                            
+                            <ul>
+                                <li>
+                                    <i class="bi bi-award"></i>_ <span>programador back-end</span>
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-mortarboard"></i>_ <span>NextJs, Saas, UI</span>
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-lamp"></i>_ <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod explicabo sunt dicta debitis repellendus praesentium...</span>
+                                </li>
+                            </ul>
+
+                            <div class="card-btn-react-post">
+                                <div>
+                                    <button>
+                                        <i class="bi bi-heart"></i>
+                                        <span>Gosto</span>
+                                    </button>
+                                    <button>
+                                        <i class="bi bi-chat"></i>
+                                        <span>Comentario</span>
+                                    </button>
+                                </div>
+                                <button>
+                                    <i class="bi bi-briefcase"></i>
+                                    <span>Candidata-se</span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="card-post anime-left">
+                        <div class="card-img-post">
+                            <div class="img-post">SON</div>
+                        </div>
+                        <div class="card-desc-post">
+                            <strong>Sonangol</strong>
+                            <small class="date-post">
+                                No dia 26, setembro 2004
+                            </small>
+                            
+                            <ul>
+                                <li>
+                                    <i class="bi bi-award"></i>_ <span>programador back-end</span>
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-mortarboard"></i>_ <span>NextJs, Saas, UI</span>
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-lamp"></i>_ <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod explicabo sunt dicta debitis repellendus praesentium...</span>
+                                </li>
+                            </ul>
+
+                            <div class="card-btn-react-post">
+                                <div>
+                                    <button>
+                                        <i class="bi bi-heart"></i>
+                                        <span>Gosto</span>
+                                    </button>
+                                    <button>
+                                        <i class="bi bi-chat"></i>
+                                        <span>Comentario</span>
+                                    </button>
+                                </div>
+                                <button>
+                                    <i class="bi bi-briefcase"></i>
+                                    <span>Candidata-se</span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>-->
+
+                </section>
+
+
+                <section class="section-nav-profile-right">
+                    <strong class="title-profile">
+                        <span>C</span>onexões
+                    </strong>
+
+                    <div class="card-search-my-connection-profile">
+                        <i class="bi bi-search"></i>
+                        <input 
+                            type="search" 
+                            id="search-my-connection-profile"
+                            placeholder="Buscar"
+                        />
+                    </div>
+
+
+                    <ul class="list-connection-profile" id="list-connection-profil">
+
+                        <!-- <li>
+                            <div class="card-circle-img-profile-connection-profile">
+                                <div class="circle-black">
+                                    SP
+                                </div>
+                            </div>
+
+                            <div class="content">
+
+                                <strong>Ivanildo Correira</strong>
+
+                                <div>
+                                    <i class="bi bi-award"></i>
+                                    <span>_Front-end</span>
+                                </div>
+
+                                <small>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit...
+                                </small>
+
+                                <div class="card-button">
+                                    <button>
+                                        <i class="bi bi-chat"></i>
+                                        <span>Puxar</span>
+                                    </button>
+
+                                    <button>
+                                        <i class="bi bi-trash"></i>
+                                        <span>Desconectar</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="card-circle-img-profile-connection-profile">
+                                <div class="circle-black">
+                                    SP
+                                </div>
+                            </div>
+
+                            <div class="content">
+
+                                <strong>Ivanildo Correira</strong>
+
+                                <div>
+                                    <i class="bi bi-award"></i>
+                                    <span>_Front-end</span>
+                                </div>
+
+                                <small>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit...
+                                </small>
+
+                                <div class="card-button">
+                                    <button>
+                                        <i class="bi bi-chat"></i>
+                                        <span>Puxar</span>
+                                    </button>
+
+                                    <button>
+                                        <i class="bi bi-trash"></i>
+                                        <span>Desconectar</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="card-circle-img-profile-connection-profile">
+                                <div class="circle-black">
+                                    SP
+                                </div>
+                            </div>
+
+                            <div class="content">
+
+                                <strong>Ivanildo Correira</strong>
+
+                                <div>
+                                    <i class="bi bi-award"></i>
+                                    <span>_Front-end</span>
+                                </div>
+
+                                <small>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit...
+                                </small>
+
+                                <div class="card-button">
+                                    <button>
+                                        <i class="bi bi-chat"></i>
+                                        <span>Puxar</span>
+                                    </button>
+
+                                    <button>
+                                        <i class="bi bi-trash"></i>
+                                        <span>Desconectar</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="card-circle-img-profile-connection-profile">
+                                <div class="circle-black">
+                                    SP
+                                </div>
+                            </div>
+
+                            <div class="content">
+
+                                <strong>Ivanildo Correira</strong>
+
+                                <div>
+                                    <i class="bi bi-award"></i>
+                                    <span>_Front-end</span>
+                                </div>
+
+                                <small>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit...
+                                </small>
+
+                                <div class="card-button">
+                                    <button>
+                                        <i class="bi bi-chat"></i>
+                                        <span>Puxar</span>
+                                    </button>
+
+                                    <button>
+                                        <i class="bi bi-trash"></i>
+                                        <span>Desconectar</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="card-circle-img-profile-connection-profile">
+                                <div class="circle-black">
+                                    SP
+                                </div>
+                            </div>
+
+                            <div class="content">
+
+                                <strong>Ivanildo Correira</strong>
+
+                                <div>
+                                    <i class="bi bi-award"></i>
+                                    <span>_Front-end</span>
+                                </div>
+
+                                <small>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit...
+                                </small>
+
+                                <div class="card-button">
+                                    <button>
+                                        <i class="bi bi-chat"></i>
+                                        <span>Puxar</span>
+                                    </button>
+
+                                    <button>
+                                        <i class="bi bi-trash"></i>
+                                        <span>Desconectar</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="card-circle-img-profile-connection-profile">
+                                <div class="circle-black">
+                                    SP
+                                </div>
+                            </div>
+
+                            <div class="content">
+
+                                <strong>Ivanildo Correira</strong>
+
+                                <div>
+                                    <i class="bi bi-award"></i>
+                                    <span>_Front-end</span>
+                                </div>
+
+                                <small>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit...
+                                </small>
+
+                                <div class="card-button">
+                                    <button>
+                                        <i class="bi bi-chat"></i>
+                                        <span>Puxar</span>
+                                    </button>
+
+                                    <button>
+                                        <i class="bi bi-trash"></i>
+                                        <span>Desconectar</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="card-circle-img-profile-connection-profile">
+                                <div class="circle-black">
+                                    SP
+                                </div>
+                            </div>
+
+                            <div class="content">
+
+                                <strong>Ivanildo Correira</strong>
+
+                                <div>
+                                    <i class="bi bi-award"></i>
+                                    <span>_Front-end</span>
+                                </div>
+
+                                <small>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit...
+                                </small>
+
+                                <div class="card-button">
+                                    <button>
+                                        <i class="bi bi-chat"></i>
+                                        <span>Puxar</span>
+                                    </button>
+
+                                    <button>
+                                        <i class="bi bi-trash"></i>
+                                        <span>Desconectar</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </li> -->
+
+                    </ul>
+                    
+                </section>
+
+            </section>
+
+        </main>
+        <!-- main end -->
+        
+
+        <script src="../assets/js/appSearchDataConection.js"></script>
+        <script src="../assets/js/globalEvent.js"></script>
+        <script src="../assets/js/logOut.js"></script>
+    
+    </body>
+
+
+</html>

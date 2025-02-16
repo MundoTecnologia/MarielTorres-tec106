@@ -1,0 +1,48 @@
+.aside {
+    width: 400px;
+    height: var(--header-height);
+    border-radius: 50px;
+    background-color: var(--text-color);
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    z-index: var(--z-fixed);
+    transition: .5s;
+}
+.aside a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    transition: .4s all;
+
+    .icon {
+        font-size: var(--h2-font-size);
+        transition: .5s all;
+    }
+}
+.aside a:is(:hover, :focus) {
+    
+    .icon {
+        transform: translateY(-11px) scale(1.1);
+        color: var(--first-color);
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 489px) {
+    .aside {
+        width: 95%;
+        padding: 0 1.6rem;
+    }
+}

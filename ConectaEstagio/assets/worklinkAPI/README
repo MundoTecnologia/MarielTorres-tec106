@@ -1,0 +1,33 @@
+python3 -m venv venv
+
+pip install fastapi[all]
+
+pip install pyautogui
+
+pip install pillow
+
+[
+  {
+  "name": "Manfer",
+  "phone": "933474998"
+},
+{
+  "name": "Rui Dala",
+  "phone": "948939589"
+},
+{
+  "name": "mariel",
+  "phone": "937759598"
+},
+{
+  "name": "Waldir",
+  "phone": "933562681"
+}
+]
+
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+.\venv\Scripts\activate
+
+uvicorn src.main:app --reload --reload-dir=src

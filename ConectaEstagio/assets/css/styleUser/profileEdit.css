@@ -1,0 +1,80 @@
+.nav-profile {
+
+    a:nth-child(2) {
+        color: #fff;
+        background-color: var(--text-color);
+        transform: scale(1.3);
+        border-bottom: 4px solid var(--first-color);
+    }
+    
+}
+
+.section-nav-edite-profile {
+    margin-bottom: 70rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+
+    > strong {
+        margin-bottom: 2.5rem;
+    }
+
+
+    .card-componentes-for-edite {
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        > div {
+            width: 200px;
+        }
+
+        input, select {
+            background-color: var(--body-color-light);
+            flex: 1;
+            padding: 1.2rem 1.5rem;
+            border-radius: 1rem;
+        }
+
+        input::placeholder {
+            color: var(--text-color-light);
+        }
+
+        textarea {
+            background-color: var(--body-color-light);
+            flex: 1;
+            padding: 1.2rem 1.5rem;
+            border-radius: 1rem;
+            resize: none;
+            height: 120px;
+        }
+
+        > form {
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            flex-wrap: wrap;
+
+            > label {
+
+                border: 2px solid var(--body-color-light);
+                font-size: var(--small-font-size);
+                padding: .45rem 1rem;
+                border-radius: 50px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: .45rem;
+            }
+        }
+
+
+    }
+    .card-componentes-for-edite.desc {
+        align-items: start;
+    }
+}

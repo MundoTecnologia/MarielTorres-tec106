@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Início | WorkLink</title>
+
+    <link rel="icon" href="../assets/image/favicon.ico" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/styleUser/home.css" />
+
+    <script src="../assets/js/appShowDataUserOnline.js"></script>
+    <script src="../assets/js/appDataHomePageUserOnline.js"></script>
+  </head>
+
+  <body onload="ShowDataUserOnline(), DataHomePageUserOnline()">
+    <!-- header -->
+    <header class="header">
+      <nav class="container nav-header">
+        <div class="nav-logo">
+          <a href="./indexUser.html" class="logo">
+            Conecta<span>Estágio</span>
+          </a>
+          <i class="bi bi-list" id="btn-state-aside"></i>
+        </div>
+
+        <div class="nav-header-link">
+          <a href="./newsUser.html" class="link-news" id="news-user-online">
+            <i class="icon-news bi bi-bell"></i>
+          </a>
+
+          <div class="card-img-and-name">
+            <span
+              class="card-img-header img-profile-user-online"
+              id="card-img-header"
+            >
+            </span>
+            <div class="name-and-icon" id="name-and-icon-header">
+              <span id="name-header" class="first-user-online"></span>
+              <i class="bi bi-caret-down-fill" id="icon-header"></i>
+            </div>
+
+            <ul id="list-dropdown-header">
+              <li>
+                <a href="./profileUser.html">
+                  <i class="bi bi-person"></i>
+                  <span>Meu Perfil</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="./profileUserEdit.html">
+                  <i class="bi bi-gear"></i>
+                  <span>Configurações</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="bi bi-info-lg"></i>
+                  <span>Ajuda?</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" onclick="logOut()">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Terminar sessão</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header end -->
+
+    <!-- aside -->
+    <aside class="aside anime-bottom" id="asideBar">
+      <a href="./indexUser.html">
+        <i class="icon bi bi-house"></i>
+      </a>
+
+      <a href="./pesquisar.html">
+        <i class="icon bi bi-search"></i>
+      </a>
+
+      <a href="./empresas.html">
+        <i class="icon bi bi-building"></i>
+      </a>
+
+      <a href="./chatUser.html">
+        <i class="icon bi bi-chat"></i>
+      </a>
+
+      <a href="./recruta.html">
+        <i class="icon bi bi-briefcase"></i>
+      </a>
+    </aside>
+    <!-- aside end -->
+
+    <!-- main -->
+    <main class="container main">
+      <section class="section-content-conections anime-bottom">
+        <div class="card-head-conection">
+          <strong>Adicione Conexões</strong>
+
+          <a href="./recruta.html">Ver mais</a>
+        </div>
+
+        <ul class="list-conection" id="list-add-conection">
+          <!-- <li>
+                            <div class="card-img-conection">
+                                <div class="img-conection">
+                                    CL
+                                </div>
+                            </div>
+                            <div class="card-content-conection">
+                                <strong>Celma Luffy</strong>
+                                <small>celmaluffy@gmail.com</small>
+                                <button>Conectar-se</button>
+                            </div>
+                        </li> -->
+        </ul>
+      </section>
+
+      <section
+        class="section-content-home anime-bottom"
+        id="section-content-home"
+      >
+        <section class="section-view-entrepris anime-bottom">
+          <div class="card-view-entrepris-title">
+            <strong>Sugestões de empresas para você!</strong>
+            <a href="./empresas.html">Ver mais</a>
+          </div>
+
+          <ul class="list-entrepris" id="list-entrepris">
+            <!-- <li>
+                        <div class=" anime-bottom">
+                            <div class="cardemps">
+                                <div class="imgemp">aqui</div>
+                            </div>
+                           
+                        </div>
+                        <strong>DropBox</strong>
+                        <button>Visualizar</button>
+                    </li>
+                    <li>
+                        <div class=" anime-bottom">
+                            <div class="cardemps">
+                                <div class="imgemp">aqui</div>
+                            </div>
+                           
+                        </div>
+                        <strong>DropBox</strong>
+                        <button>Visualizar</button>
+                    </li>
+                    <li>
+                        <div class=" anime-bottom">
+                            <div class="cardemps">
+                                <div class="imgemp">aqui</div>
+                            </div>
+                           
+                        </div>
+                        <strong>DropBox</strong>
+                        <button>Visualizar</button>
+                    </li>-->
+          </ul>
+        </section>
+
+        <article class="card-search anime-bottom">
+          <input type="search" placeholder="Faz uma busca!" required />
+          <button>
+            <i class="bi bi-search"></i>
+            <span>Buscar</span>
+          </button>
+        </article>
+
+        <article class="card-filter">
+          <a href="#">Todos</a>
+          <a href="#">Empresas</a>
+          <a href="#">Recrutas</a>
+          <a href="#">Mais</a>
+        </article>
+
+        <!-- <article class="card-post anime-left">
+                    <div class="card-img-post">
+                        <div class="img-post">SON</div>
+                    </div>
+                    <div class="card-desc-post">
+                        <strong>Sonangol</strong>
+                        <small class="date-post">
+                            No dia 26, setembro 2004
+                        </small>
+                        
+                        <ul>
+                            <li>
+                                <i class="bi bi-award"></i>_ <span>programador back-end</span>
+                            </li>
+
+                            <li>
+                                <i class="bi bi-mortarboard"></i>_ <span>NextJs, Saas, UI</span>
+                            </li>
+
+                            <li>
+                                <i class="bi bi-lamp"></i>_ <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod explicabo sunt dicta debitis repellendus praesentium...</span>
+                            </li>
+                        </ul>
+
+                        <div class="card-btn-react-post">
+                            <div>
+                                <button>
+                                    <i class="bi bi-heart"></i>
+                                    <span>Gosto</span>
+                                </button>
+                                <button>
+                                    <i class="bi bi-chat"></i>
+                                    <span>Comentario</span>
+                                </button>
+                            </div>
+                            <button>
+                                <i class="bi bi-briefcase"></i>
+                                <span>Candidata-se</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article class="card-post anime-left">
+                    <div class="card-img-post">
+                        <div class="img-post">SON</div>
+                    </div>
+                    <div class="card-desc-post">
+                        <strong>Sonangol</strong>
+                        <small class="date-post">
+                            No dia 26, setembro 2004
+                        </small>
+                        
+                        <ul>
+                            <li>
+                                <i class="bi bi-award"></i>_ <span>programador back-end</span>
+                            </li>
+
+                            <li>
+                                <i class="bi bi-mortarboard"></i>_ <span>NextJs, Saas, UI</span>
+                            </li>
+
+                            <li>
+                                <i class="bi bi-lamp"></i>_ <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod explicabo sunt dicta debitis repellendus praesentium...</span>
+                            </li>
+                        </ul>
+
+                        <div class="card-btn-react-post">
+                            <div>
+                                <button>
+                                    <i class="bi bi-heart"></i>
+                                    <span>Gosto</span>
+                                </button>
+                                <button>
+                                    <i class="bi bi-chat"></i>
+                                    <span>Comentario</span>
+                                </button>
+                            </div>
+                            <button>
+                                <i class="bi bi-briefcase"></i>
+                                <span>Candidata-se</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article class="card-post anime-left">
+                    <div class="card-img-post">
+                        <div class="img-post">SON</div>
+                    </div>
+                    <div class="card-desc-post">
+                        <strong>Sonangol</strong>
+                        <small class="date-post">
+                            No dia 26, setembro 2004
+                        </small>
+                        
+                        <ul>
+                            <li>
+                                <i class="bi bi-award"></i>_ <span>programador back-end</span>
+                            </li>
+
+                            <li>
+                                <i class="bi bi-mortarboard"></i>_ <span>NextJs, Saas, UI</span>
+                            </li>
+
+                            <li>
+                                <i class="bi bi-lamp"></i>_ <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod explicabo sunt dicta debitis repellendus praesentium...</span>
+                            </li>
+                        </ul>
+
+                        <div class="card-btn-react-post">
+                            <div>
+                                <button>
+                                    <i class="bi bi-heart"></i>
+                                    <span>Gosto</span>
+                                </button>
+                                <button>
+                                    <i class="bi bi-chat"></i>
+                                    <span>Comentario</span>
+                                </button>
+                            </div>
+                            <button>
+                                <i class="bi bi-briefcase"></i>
+                                <span>Candidata-se</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </article>-->
+      </section>
+
+      <section class="section-content-profile anime-bottom">
+        <div class="backgrond-profile"></div>
+        <div class="content-profile">
+          <div class="card-img-name-email anime-bottom">
+            <div class="card-img-profile">
+              <div class="img-profile-user-online"></div>
+            </div>
+            <div class="card-name-email">
+              <strong>
+                <span class="first-user-online">fisrt name</span>
+                <span class="last-user-online">last name</span>
+              </strong>
+              <small class="email-user-online">email user</small>
+            </div>
+          </div>
+
+          <p class="desc-user-online">description user</p>
+
+          <ul class="list-skills">
+            <li>
+              <strong class="count-conection-user-online"></strong>
+              <small>Conexões</small>
+            </li>
+
+            <li>
+              <strong class="count-post-user-online"></strong>
+              <small>Postagens</small>
+            </li>
+
+            <li>
+              <strong class="count-view-user-online"></strong>
+              <small>Visualizações</small>
+            </li>
+          </ul>
+
+          <a href="#" download="MeuCV" class="button-download-cv">
+            <span>Baixar CV</span>
+            <i class="bi bi-cloud-download"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- main end -->
+
+    <script src="../assets/js/globalEvent.js"></script>
+    <script src="../assets/js/logOut.js"></script>
+  </body>
+</html>

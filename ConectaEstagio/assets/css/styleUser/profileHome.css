@@ -1,0 +1,183 @@
+.nav-profile {
+
+    a:nth-child(1) {
+        color: #fff;
+        background-color: var(--text-color);
+        transform: scale(1.3);
+        border-bottom: 4px solid var(--first-color);
+    }
+    
+}
+
+.section-nav-profile {
+    margin-bottom: 100rem;
+    display: flex;
+    gap: 3.5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+   
+
+
+
+    .section-nav-profile-left {
+        width: 390px;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+
+
+        .card-description {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            p {
+                text-indent: 2rem;
+            }
+        } 
+        
+        
+        .card-expe {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            ul {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                li {
+                    border: 2px solid var(--body-color-light);
+                    font-size: var(--small-font-size);
+                    padding: .45rem 1rem;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+
+
+    .section-nav-profile-center {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;  
+
+
+        
+    }
+
+
+    .section-nav-profile-right {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 320px;
+
+        .card-search-my-connection-profile {
+            background-color: var(--body-color-light);
+            border-radius: 50px;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            input {
+                width: 91%;
+                background-color: transparent;
+                padding: 1.3rem 0;
+                font-size: var(--small-font-size);
+            }
+        }
+
+        .list-connection-profile {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: .75rem 0;
+            max-height: 735px;
+            overflow: hidden;
+            overflow-y: scroll;
+
+
+            li {
+                display: flex;
+                align-items: start;
+                transition: .3s all;
+                gap: 1rem;
+
+                .card-circle-img-profile-connection-profile {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    padding: 3px;
+                    border: 3px solid var(--first-color);
+
+                    .circle-black {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        background-color: var(--text-color);
+                        display: grid;
+                        place-content: center;
+                        font-size: var(--h1-font-size);
+                        font-weight: var(--font-bold);
+                        color: #fff;
+                    }
+                }
+
+
+                .content {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .45rem;
+
+                    > strong {
+                        font-size: var(--h3-font-size);
+                    }
+
+                    > small {
+                        font-size: var(--small-font-size);
+                        color: var(--text-color-light);
+                        margin-top: .15rem;
+                    }
+
+                    .card-button {
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                        margin-top: 1rem;
+
+
+                        button {
+                            padding: .70rem 1rem;
+                            border-radius: 50px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: .45rem;
+                            width: 100%;
+                            
+                            background-color: var(--body-color-light);
+
+                            span {
+                                font-size: var(--small-font-size) ;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .list-connection-profile::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+    }
+}

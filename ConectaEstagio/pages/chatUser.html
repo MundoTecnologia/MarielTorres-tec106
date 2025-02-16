@@ -1,0 +1,236 @@
+7<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat | WorkLink</title>
+
+    <link rel="icon" href="../assets/image/favicon.ico" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/styleUser/chatUser.css" />
+
+    <script src="../assets/js/appChatUser.js"></script>
+    <script src="../assets/js/appShowDataUserOnline.js"></script>
+    <script src="../assets/js/appDataHomePageUserOnline.js"></script>
+  </head>
+  <body
+    onload="ShowDataUserOnline(),DataHomePageUserOnline(),TolkingManager(), scrollToBottom() "
+  >
+    <!-- header -->
+    <header class="header">
+      <nav class="container nav-header">
+        <div class="nav-logo">
+          <a href="./indexUser.html" class="logo">
+            Conecta<span>Estágio</span>
+          </a>
+          <i class="bi bi-list" id="btn-state-aside"></i>
+        </div>
+
+        <div class="nav-header-link">
+          <a href="./newsUser.html" class="link-news" id="news-user-online">
+            <i class="icon-news bi bi-bell"></i>
+          </a>
+
+          <div class="card-img-and-name">
+            <span
+              class="card-img-header img-profile-user-online"
+              id="card-img-header"
+            >
+            </span>
+            <div class="name-and-icon" id="name-and-icon-header">
+              <span id="name-header" class="first-user-online"></span>
+              <i class="bi bi-caret-down-fill" id="icon-header"></i>
+            </div>
+
+            <ul id="list-dropdown-header">
+              <li>
+                <a href="./profileUser.html">
+                  <i class="bi bi-person"></i>
+                  <span>Meu Perfil</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="./profileUserEdit.html">
+                  <i class="bi bi-gear"></i>
+                  <span>Configurações</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="bi bi-info-lg"></i>
+                  <span>Ajuda?</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" onclick="logOut()">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Terminar sessão</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header end -->
+
+    <!-- aside -->
+    <aside class="aside anime-bottom" id="asideBar">
+      <a href="./indexUser.html">
+        <i class="icon bi bi-house"></i>
+      </a>
+
+      <a href="./pesquisar.html">
+        <i class="icon bi bi-search"></i>
+      </a>
+
+      <a href="./empresas.html">
+        <i class="icon bi bi-building"></i>
+      </a>
+
+      <a href="./chatUser.html">
+        <i class="icon bi bi-chat"></i>
+      </a>
+
+      <a href="./recruta.html">
+        <i class="icon bi bi-briefcase"></i>
+      </a>
+    </aside>
+    <!-- aside end -->
+
+    <!-- main -->
+    <main class="container main">
+      <section class="section-chat-user">
+        <strong>Chat</strong>
+        <small
+          >Neste contexto, a comunicação eficiente emerge como um elemento
+          crucial para o sucesso das organizações...</small
+        >
+        <form action="#">
+          <i class="bi bi-search"></i>
+          <input type="search" placeholder="Buscar" id="search" />
+        </form>
+
+        <ul class="list-my-connection-chat">
+          <!-- li 
+                    <li>
+
+                        <div class="card-img-user-chat">
+                            <div>
+                                <span>LN</span>
+                            </div>
+                        </div>
+                        
+
+                        <div class="card-content-user-chat">
+
+                            <strong>Leo Nardo</strong>
+                            <small>
+                                <i class="bi bi-award"></i>
+                                _Front-end
+                            </small>
+
+                            <button>
+                                <i class="bi bi-chat"></i>
+                                <span>Puxar assunto</span>
+                            </button>
+                            
+                        </div>
+
+                    </li>
+                  -->
+        </ul>
+      </section>
+
+      <section class="section-content-chat">
+        <div class="head-chat">
+          <div class="card-img-profile-chat">
+            <span class="card-user-conected"></span>
+          </div>
+          <div class="card-name-state-chat">
+            <strong id="header-user-online"></strong>
+            <small>Online</small>
+          </div>
+        </div>
+
+        <div class="content-chat">
+          <ul id="list-chat">
+            <li class="receptor anime-bottom">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Cupiditate maxime consequuntur fuga facilis nihil aliquid, quos,
+              ipsa repellendus voluptatum nostrum ex inventore deserunt cumque.
+              Laudantium incidunt aperiam inventore ex quia.
+              <span class="data">25/5/2024</span>
+            </li>
+            <li class="emissor anime-bottom">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi
+              illo maxime tempore possimus, non excepturi ipsa adipisci culpa
+              ipsum? Nobis illo harum facere libero nesciunt fuga voluptas
+              voluptatum accusantium aut!
+              <span class="data">25/5/2024</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="foot-chat">
+          <textarea
+            id="messageTextArea"
+            placeholder="Escreve a sua mensagem"
+          ></textarea>
+          <button onclick="MessagesContent()">
+            <i class="bi bi-send"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="section-content-profile anime-bottom">
+        <div class="backgrond-profile"></div>
+        <div class="content-profile">
+          <div class="card-img-name-email anime-bottom">
+            <div class="card-img-profile-chat">
+              <div class="img-profile-user-chat"></div>
+            </div>
+            <div class="card-name-email">
+              <strong>
+                <span class="user-firstname"></span>
+                <span class="user-lastname"></span>
+              </strong>
+              <small>
+                <i class="bi bi-award"></i>
+                <span class="list-career"></span>
+              </small>
+            </div>
+          </div>
+
+          <p class="desc-user-online"></p>
+
+          <ul class="list-skills">
+            <li>
+              <strong class="count-conection-user-online"></strong>
+              <small>Conexões</small>
+            </li>
+          </ul>
+
+          <a href="#" class="button-download-cv">
+            <i class="bi bi-whatsapp"></i>
+            <span>Puxar pelo Whatsapp</span>
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- main end -->
+    <script>
+      function scrollToBottom() {
+        const chatContent = document.querySelector(".content-chat");
+        chatContent.scrollTop = chatContent.scrollHeight;
+      }
+    </script>
+
+    <script src="../assets/js/globalEvent.js"></script>
+    <script src="../assets/js/logOut.js"></script>
+  </body>
+</html>

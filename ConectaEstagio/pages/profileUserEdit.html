@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atualizar Perfil | WorkLink</title>
+
+    <link rel="icon" href="../assets/image/favicon.ico" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/styleUser/profile.css" />
+    <link rel="stylesheet" href="../assets/css/styleUser/profileEdit.css" />
+
+    <script src="../assets/js/appShowDataUserOnline.js"></script>
+    <script src="../assets/js/appUpdateDataUserOnlie.js" defer></script>
+  </head>
+
+  <body onload="ShowDataUserOnline()">
+    <!-- header -->
+    <header class="header">
+      <nav class="container nav-header">
+        <a href="./indexUser.html" class="logo">
+          Conecta<span>Estágio</span>
+        </a>
+
+        <div class="nav-header-link">
+          <a href="./newsUser.html" class="link-news" id="news-user-online">
+            <i class="icon-news bi bi-bell"></i>
+          </a>
+
+          <div class="card-img-and-name">
+            <span
+              class="card-img-header img-profile-user-online"
+              id="card-img-header"
+            >
+            </span>
+            <div class="name-and-icon" id="name-and-icon-header">
+              <span id="name-header" class="first-user-online"></span>
+              <i class="bi bi-caret-down-fill" id="icon-header"></i>
+            </div>
+
+            <ul id="list-dropdown-header">
+              <li>
+                <a href="./profileUser.html">
+                  <i class="bi bi-person"></i>
+                  <span>Meu Perfil</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="./profileUserEdit.html">
+                  <i class="bi bi-gear"></i>
+                  <span>Configurações</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="bi bi-info-lg"></i>
+                  <span>Ajuda?</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" onclick="logOut()">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Terminar sessão</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header end -->
+
+    <!-- aside -->
+    <aside class="aside anime-bottom">
+      <a href="./indexUser.html">
+        <i class="icon bi bi-house"></i>
+      </a>
+
+      <a href="./pesquisar.html">
+        <i class="icon bi bi-search"></i>
+      </a>
+
+      <a href="./empresas.html">
+        <i class="icon bi bi-building"></i>
+      </a>
+
+      <a href="./chatUser.html">
+        <i class="icon bi bi-chat"></i>
+      </a>
+
+      <a href="./recruta.html">
+        <i class="icon bi bi-briefcase"></i>
+      </a>
+    </aside>
+    <!-- aside end -->
+
+    <!-- main -->
+    <main class="main-profile">
+      <section class="section-profile-banner"></section>
+
+      <section class="container section-profile-content">
+        <article class="card-info-profile">
+          <div class="card-img-profile-user">
+            <div class="img-profile-user-online"></div>
+          </div>
+          <strong>
+            <span class="first-user-online">fisrt name</span>
+            <span class="last-user-online">last name</span>
+          </strong>
+          <div class="card-desc-profile">
+            <span class="desc-user-online"> Bio ! </span>
+          </div>
+
+          <div class="card-contact">
+            <div>
+              <i class="bi bi-award"></i>
+              <span class="career-user-online"></span>
+            </div>
+            <i class="bi bi-dot"></i>
+            <div>
+              <i class="bi bi-whatsapp"></i>
+              <span>_<span class="number-user-online"></span></span>
+            </div>
+            <i class="bi bi-dot"></i>
+            <div>
+              <i class="bi bi-at"></i>
+              <span>_<span class="email-user-online"></span></span>
+            </div>
+          </div>
+
+          <div class="card-more-info-profile">
+            <span>
+              <strong class="count-conection-user-online"></strong>
+              <small>Conexões</small>
+            </span>
+
+            <div class="line"></div>
+
+            <span>
+              <strong>230</strong>
+              <small>Publicações</small>
+            </span>
+
+            <div class="line"></div>
+
+            <button class="btn-public">Publicar</button>
+
+            <button class="btn-cv">Meu CV</button>
+
+            <button>
+              <i class="bi bi-three-dots"></i>
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <nav class="nav-profile">
+        <a href="./profileUser.html">
+          <i class="bi bi-house"></i>
+        </a>
+
+        <a href="./profileUserEdit.html">
+          <i class="bi bi-pencil"></i>
+        </a>
+      </nav>
+
+      <section class="container section-nav-edite-profile">
+        <strong class="title-profile">
+          <span>A</span>tualisa seu perfil
+        </strong>
+
+        <div class="card-componentes-for-edite">
+          <div class="card-label">
+            <label for="">Nome</label>
+          </div>
+          <input
+            type="text"
+            placeholder="Atualiza seu nome"
+            class="first-user-online-to-update"
+          />
+        </div>
+
+        <div class="card-componentes-for-edite">
+          <div class="card-label">
+            <label for="">Apelido</label>
+          </div>
+          <input
+            type="text"
+            placeholder="Atualiza seu apelido"
+            class="last-user-online-to-update"
+          />
+        </div>
+
+        <div class="card-componentes-for-edite">
+          <div class="card-label">
+            <label for="">Número</label>
+          </div>
+          <input
+            type="number"
+            placeholder="Atualiza seu número (Whatsapp)"
+            class="number-user-online-to-update"
+          />
+        </div>
+
+        <div class="card-componentes-for-edite">
+          <div class="card-label">
+            <label for="">Email</label>
+          </div>
+          <input
+            type="email"
+            placeholder="Atualiza seu email"
+            class="email-user-online-to-update"
+          />
+        </div>
+
+        <div class="card-componentes-for-edite">
+          <div class="card-label">
+            <label for="">Localização</label>
+          </div>
+          <input
+            type="text"
+            placeholder="Localização atual (Ex: Luanda, Ilha de luanda)"
+            class="gps-user-online-to-update"
+          />
+        </div>
+
+        <div class="card-componentes-for-edite">
+          <div class="card-label">
+            <label for="">Carreira</label>
+          </div>
+          <select name="" id="select-career-user-online-to-update">
+            <option value="0" selected>Selecione a sua Carreira</option>
+          </select>
+        </div>
+
+        <div class="card-componentes-for-edite">
+          <div class="card-label">
+            <label for="">Experiência</label>
+          </div>
+
+          <form action="#" id="form-to-list-exp-user-online-to-update">
+            <!-- <label for="Estudante" class="anime-left">
+                            <input 
+                                type="checkbox"
+                                name=""
+                                id="Estudante"
+                                checked="false"
+                            />
+                            <label for="Estudante">Estudante</label>
+                        </label> -->
+          </form>
+        </div>
+
+        <div class="card-componentes-for-edite">
+          <div class="card-label">
+            <label for="">Data de nascimento</label>
+          </div>
+          <input type="date" placeholder="Data de nascimento" />
+        </div>
+
+        <div class="card-componentes-for-edite">
+          <div class="card-label">
+            <label for="">Genero</label>
+          </div>
+          <select name="" id="">
+            <option selected>Personalizado</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+          </select>
+        </div>
+
+        <div class="card-componentes-for-edite desc">
+          <div class="card-label">
+            <label for="">Descrição</label>
+          </div>
+          <textarea
+            placeholder="Atualiza sua descrição"
+            class="desc-user-online-to-update"
+          ></textarea>
+        </div>
+
+        <div class="card-componentes-for-edite">
+          <div class="card-label">
+            <label for="">Linguas Faladas</label>
+          </div>
+          <input
+            type="text"
+            placeholder="Portugues, Frances, Ingles, ..."
+            class="lang-user-online-to-update"
+          />
+        </div>
+
+        <div class="card-componentes-for-edite card-btn-update">
+          <button class="btn-update" onclick="UpdateDataUserOnlie()">
+            Salvar atualizações
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- main end -->
+
+    <script src="../assets/js/globalEvent.js"></script>
+    <script src="../assets/js/logOut.js"></script>
+  </body>
+</html>
